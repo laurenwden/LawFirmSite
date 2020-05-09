@@ -52,9 +52,8 @@ ul{
 
 .foot{
     border-top: 2px solid black;
-    position: fixed;
     bottom: 0;
-    width: 67%;
+    width: 100%;
     padding: 20px 0 15px 0;
 }
 .footerElem>div>a>p{
@@ -65,5 +64,9 @@ ul{
 }
 .footerElem>p{
     font-size: 80%;
+}
+.foot-link{
+    color: grey;
+    text-decoration: none;
 }
 /* TODO: Setup text-decoration on links */
