@@ -1,13 +1,50 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
 body {
     background-image: url(https://thesunnahsolutions.com/wp-content/uploads/2015/12/bigstock-white-wood-texture-background-50738852-kopie.jpg);
     }
+.panel-heading{
+    background-color: white;
+    display: block;
+    margin: 0 auto;
+    width: 67%;
+    height: 20vh;
+    text-align: left;
+}
+#logo {
+    display: inline-block;
+    padding: 2px;
+    margin-left: 5vh;
+    margin-top: 4.9vh;
+    border-style: double;
+}
+#firmname {
+    display: inline-block;
+    padding: 2px;
+    margin-top: 5vh;
+    border-style: double;
+}
 .panel-body{
-    text-align: center;
     display: block;
     margin: 0 auto;
     width: 67%;
     height: 100vh;
     background-color: white;
+    }
+nav{
+    display: block;
+    border-top: 2px solid #848484;
+    border-bottom: 2px solid #848484;
+}
+ul{
+    position: relative;
+    color: lightgray;
+}
+.nav-link{
+    font-family: Helvetica, sans-serif;
+    margin: -6px 14px;
+    color: black;   
 }
 .logobox {
     border: 1px solid black;
@@ -23,10 +60,59 @@ body {
     padding: 1px;
     margin-top: 130px;
     /*float: left; */
+
 }
-#logo {
-    border: 1px solid black;
+#mainpic {
+    border-style: double;
     padding: 2px;
-    margin: 2px;
+    margin-top: 5vh;
     float: left;
+
+    margin-left: 16px;
+    margin-bottom: 25px;
 }
+#welcomemsg {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+#welcometxt {
+    text-align: left;
+    margin-left: 20px;
+}
+textarea {
+    display: block;
+    background-color: maroon;
+    color: white;
+    text-align: left;
+    margin-top: 5vh;
+    margin-right: 40px;
+}
+
+address {
+    display: block;
+    text-align: left;
+    margin-top: 30px;
+    font-size: small;
+}
+address::first-line {
+    font-weight: bold;
+}
+.foot{
+    border-top: 2px solid black;
+    position: fixed;
+    bottom: 0;
+    width: 67%;
+    padding: 20px 0 15px 0;
+}
+.footerElem>div>a>p{
+    display: inline;
+    text-align: center;
+    /* padding: 10px 0 5x 0; */
+    font-size: 100%;
+}
+.footerElem>p{
+    font-size: 80%;
+}
+
