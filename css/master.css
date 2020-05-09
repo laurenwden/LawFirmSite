@@ -2,6 +2,7 @@ body {
 background-image: url(https://thesunnahsolutions.com/wp-content/uploads/2015/12/bigstock-white-wood-texture-background-50738852-kopie.jpg);
 }
 
+
 .panel-body{
     text-align: center;
     display: block;
@@ -24,6 +25,7 @@ background-image: url(https://thesunnahsolutions.com/wp-content/uploads/2015/12/
     padding: 1px;
     margin-top: 0px;
 }
+
 #logo {
     border: 1px solid black;
     padding: 2px;
@@ -36,6 +38,7 @@ nav{
     border-top: 2px solid #848484;
     border-bottom: 2px solid #848484;
     margin-left: 40px;
+    margin-right: 0px;
     margin-bottom: 20px;
 }
 
@@ -45,25 +48,28 @@ ul{
 }
 .nav-link{
     font-family: Helvetica, sans-serif;
-    margin: -6px 14px;
+    margin: -6px 15px;
     color: black;
+    font-size: 85%;
    
 }
 
 .foot{
-    border-top: 2px solid black;
-    position: fixed;
-    bottom: 0;
-    width: 67%;
-    padding: 20px 0 15px 0;
+        position: fixed;
+        border-top: 2px solid black;
+        width: 60%;
+        margin-bottom: 40;
+        padding: 20px 0 15px 0;
 }
+
 .footerElem>div>a>p{
-    display: inline;
-    text-align: center;
-   /* padding: 10px 0 5x 0; */
-    font-size: 100%;
+        display: inline;
+        text-align: center;
+       /* padding: 10px 0 5x 0; */
+        font-size: 100%;
 }
+
 .footerElem>p{
-    font-size: 80%;
+        font-size: 80%;
 }
 /* TODO: Setup text-decoration on links */
