@@ -17,6 +17,22 @@ body {
     height: 100vh;
     background-color: white;
     }
+nav{
+    display: block;
+    border-top: 2px solid #848484;
+    border-bottom: 2px solid #848484;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+ul{
+    position: relative;
+    color: lightgray;
+}
+.nav-link{
+    font-family: Helvetica, sans-serif;
+    margin: -6px 14px;
+    color: black;   
+}
 #mainpic {
     float: left;
     border: 1px solid gray;
