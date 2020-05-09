@@ -1,6 +1,7 @@
 body {
 background-image: url(https://thesunnahsolutions.com/wp-content/uploads/2015/12/bigstock-white-wood-texture-background-50738852-kopie.jpg);
 }
+
 .panel-body{
     text-align: center;
     display: block;
@@ -9,6 +10,46 @@ background-image: url(https://thesunnahsolutions.com/wp-content/uploads/2015/12/
     height: 100vh;
     background-color: white;
 }
+
+.logobox {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 1px;
+    margin-top: 0px;
+    margin-left: 40px;
+}
+.firmname {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 1px;
+    margin-top: 0px;
+}
+#logo {
+    border: 1px solid black;
+    padding: 2px;
+    margin: 2px;
+    float: left;
+}
+
+nav{
+    display: block;
+    border-top: 2px solid #848484;
+    border-bottom: 2px solid #848484;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+ul{
+    position: relative;
+    color: lightgray;
+}
+.nav-link{
+    font-family: Helvetica, sans-serif;
+    margin: -6px 14px;
+    color: black;
+   
+}
+
 .foot{
     border-top: 2px solid black;
     position: fixed;
