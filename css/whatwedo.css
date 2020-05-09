@@ -1,0 +1,27 @@
+body {
+    background-image: url(https://thesunnahsolutions.com/wp-content/uploads/2015/12/bigstock-white-wood-texture-background-50738852-kopie.jpg);
+    }
+    .panel-body{
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 67%;
+        height: 100vh;
+        background-color: white;
+    }
+    .foot{
+        border-top: 2px solid black;
+        position: fixed;
+        bottom: 0;
+        width: 67%;
+        padding: 20px 0 15px 0;
+    }
+    .footerElem>div>a>p{
+        display: inline;
+        text-align: center;
+       /* padding: 10px 0 5x 0; */
+        font-size: 100%;
+    }
+    .footerElem>p{
+        font-size: 80%;
+    }
