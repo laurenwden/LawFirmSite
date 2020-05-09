@@ -46,11 +46,28 @@ ul{
     margin: -6px 14px;
     color: black;   
 }
+.logobox {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 1px;
+    margin-top: 100px;
+    margin-left: 40px;
+  /*  float: left; */
+}
+.firmname {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 1px;
+    margin-top: 130px;
+    /*float: left; */
+
+}
 #mainpic {
     border-style: double;
     padding: 2px;
     margin-top: 5vh;
     float: left;
+
     margin-left: 16px;
     margin-bottom: 25px;
 }
@@ -98,3 +115,4 @@ address::first-line {
 .footerElem>p{
     font-size: 80%;
 }
+
