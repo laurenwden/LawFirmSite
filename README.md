@@ -1,7 +1,7 @@
 # Law firm site
-This is the first of many projects by **The Breaking Benjamins** ("TBB") --a group of legendary coders from all around the world.
+This is the first of many projects by **The Breaking Benjamins** ("TBB") -- a group of legendary coders from all around 'Merica.
 
-The final deliverable can be found [here.](https://a.com)
+The final deliverable can be found [here.](https://jnolan97.github.io/LawFirmSite/)
 
 You may find the original requirenments [here.](https://classroom.google.com/c/OTQ5OTQ1MDk1MDNa/a/MTAwMTAxODgxMjQ1/details)
 
@@ -28,10 +28,14 @@ The main page shows users:
 * an address section with contact info.
 
 ## What We Do
-The what we do page shows users:
+The What We Do pag displays:
 * images with borders,
 * a list to the side of the page,
 * navbar and,
 * a footer linking to other pages on the site.
 
 ## Who We Are
+The Who We Are page displays 
+* a column with text and an image. 
+* It also shows a text area on the right followed by five placeholder images with borders. 
+* The nav bar and footer allow the user to navigate to other pages within the site. 
