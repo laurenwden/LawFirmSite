@@ -1,10 +1,13 @@
-body {
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
 background-image: url(https://thesunnahsolutions.com/wp-content/uploads/2015/12/bigstock-white-wood-texture-background-50738852-kopie.jpg);
 }
 
 
 .panel-body{
-    text-align: center;
     display: block;
     margin: 0 auto;
     width: 67%;
@@ -12,32 +15,32 @@ background-image: url(https://thesunnahsolutions.com/wp-content/uploads/2015/12/
     background-color: white;
 }
 
-.logobox {
-    border: 1px solid black;
-    display: inline-block;
-    padding: 1px;
-    margin-top: 0px;
-    margin-left: 40px;
-}
-.firmname {
-    border: 1px solid black;
-    display: inline-block;
-    padding: 1px;
-    margin-top: 0px;
-}
-
+/*Header logo*/
 #logo {
-    border: 1px solid black;
+    display: inline-block;   
+    margin-left: 40px;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    border-style: double;
+    border: 1px solid #848484;
     padding: 2px;
-    margin: 2px;
-    float: left;
 }
 
+#firmname {
+    display: inline-block;
+    padding: 2px;
+    margin-top: 3vh;
+    margin-bottom: -2vh;
+    border-style: double;
+}
+
+/*NavBar*/
 nav{
     display: block;
     border-top: 2px solid #848484;
     border-bottom: 2px solid #848484;
-    margin-left: 40px;
+    width: 100%;
+    margin-left: 20px;
     margin-right: 0px;
     margin-bottom: 20px;
 }
@@ -54,25 +57,125 @@ ul{
    
 }
 
+/*Footer*/
 .foot{
+    text-align: center;
     border-top: 2px solid black;
+    /* position: fixed; */
+    margin-left: 20px;
     bottom: 0;
-    width: 100%;
+    width: 90%;
     padding: 20px 0 15px 0;
 }
-
 .footerElem>div>a>p{
-        display: inline;
-        text-align: center;
-       /* padding: 10px 0 5x 0; */
-        font-size: 100%;
+    display: inline;
+    text-align: center;
+    /* padding: 10px 0 5x 0; */
+    font-size: 80%;
 }
 
-.footerElem>p{
-        font-size: 80%;
-}
 .foot-link{
     color: grey;
     text-decoration: none;
 }
-/* TODO: Setup text-decoration on links */
+
+
+#copyright{
+    font-size: small;
+}
+
+/*This is the end of the common elements styling*/
+
+/*All bordered placeholder images*/
+#mainpic{
+    border-style: double;
+    padding: 2px;
+    border-color: #848484;
+    float: left;
+}
+
+/*Mainpage*/
+.mainpic{
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+#welcomemsg {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#welcometxt{
+    text-align: left;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+textarea {
+    display: block;
+    background-color: maroon;
+    color: white;
+    text-align: left;
+    margin-left: 10px;
+    padding-right: 40px;
+    width: 85%;
+    height: 325px;
+}
+
+address {
+    display: block;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: small;
+    color: black;
+
+}
+address::first-line {
+    font-weight: bold;
+}
+
+.email{
+    text-decoration: none;
+    color: #800000;
+}
+
+/*Who we are and what we do pages*/
+
+.col-md-4{
+    padding-right: 0px;
+}
+
+.leftcolumn{ 
+    text-align: left;
+    width: 110%;
+    margin-top:15px;
+    margin-left: 20px;
+    padding: 20px 10px;
+    background-color: #800000;
+    color: white;
+    font-size: 12px;
+}
+
+#columnhead{
+    margin-bottom: 10px;
+}
+.list{
+    margin-bottom: 5px;
+}
+
+
+.widecolumn{
+    font-size: 14px;
+    text-align: left;
+    margin: 10px 25px;
+    margin-right: 50px;
+}
+
+
+#lowertxt{
+    font-size: 11px;
+    margin-bottom: -2px;
+}

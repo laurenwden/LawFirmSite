@@ -1,32 +1,5 @@
-.col-md-4{
-    padding-right: 0px;
-}
-.leftcolumn{ 
-    text-align: left;
-    width: 100%;
-    margin-top:15px;
-    margin-left: 40px;
-    padding: 20px 10px;
-    background-color: #800000;
-    color: white;
-    font-size: 12px;
-}
 
-.work{
-    font-size: 90%;
-    margin-bottom: 0rem;
-}
 
-.rightcolumn{
-    font-size: 15px;
-    text-align: left;
-    margin: 10px 40px;
-}
-#ph{
-    display: inline-block;
-    padding: 3px 3px;
-    border: 1px double black;
-}
 
 
 
