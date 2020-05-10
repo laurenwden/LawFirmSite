@@ -71,11 +71,11 @@ ul{
     display: inline;
     text-align: center;
     /* padding: 10px 0 5x 0; */
-    font-size: 75%;
+    font-size: 80%;
 }
 
 .foot-link{
-    color: black;
+    color: grey;
     text-decoration: none;
 }
 
