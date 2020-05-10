@@ -3,15 +3,10 @@
 }
 .leftcolumn{ 
     text-align: left;
-<<<<<<< HEAD
     width: 100%;
     margin-top:15px;
     margin-left: 40px;
     padding: 20px 10px;
-=======
-    margin-left: 20px;
-    padding:15px 10px;
->>>>>>> master
     background-color: #800000;
     color: white;
     font-size: 12px;
@@ -25,10 +20,8 @@
 .rightcolumn{
     font-size: 15px;
     text-align: left;
-<<<<<<< HEAD
     margin: 10px 40px;
 }
-
 #ph{
     display: inline-block;
     padding: 3px 3px;
@@ -38,18 +31,3 @@
 
 
 
-=======
-    padding-right: 20px;
-    padding-left: 0px;
-}
-.row {
-    padding: 10px 10px;
-}
-.img-row0{
-    border-style: double;
-}
-.img-row{
-    margin-left: 0px;
-    border-style: double;
-}
->>>>>>> master

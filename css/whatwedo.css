@@ -9,11 +9,44 @@ body {
         height: 100vh;
         background-color: white;
     }
+    .row {
+        padding: 10px 10px;
+    }
+    nav{
+        display: block;
+        border-top: 2px solid #848484;
+        border-bottom: 2px solid #848484;
+    }
+    ul{
+        position: relative;
+        color: lightgray;
+    }
+    .nav-link{
+        font-family: Helvetica, sans-serif;
+        margin: -6px 14px;
+        color: black;   
+    }
+    
+    .img-row0{
+        border-style: double;
+    }
+    
+    .img-row{
+        margin-left: 0px;
+        border-style: double;
+    }
+    #logo{
+        display: block;
+        float: left;
+    }
+    .firmname{
+        display: block;
+        float: left;
+    }
     .foot{
         border-top: 2px solid black;
-        position: fixed;
         bottom: 0;
-        width: 67%;
+        width: 100%;
         padding: 20px 0 15px 0;
     }
     .footerElem>div>a>p{
@@ -24,4 +57,18 @@ body {
     }
     .footerElem>p{
         font-size: 80%;
+    }
+    .foot-link{
+        color: grey;
+        text-decoration: none;
+    }
+    .leftcolumn{ 
+        text-align: left;
+        width: 100%;
+        margin-top:15px;
+        margin-left: 40px;
+        padding: 20px 10px;
+        background-color: #800000;
+        color: white;
+        font-size: 12px;
     }
