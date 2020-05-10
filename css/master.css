@@ -61,10 +61,10 @@ ul{
 .foot{
     text-align: center;
     border-top: 2px solid black;
-    position: fixed;
+    /* position: fixed; */
     margin-left: 20px;
     bottom: 0;
-    width: 61%;
+    width: 90%;
     padding: 20px 0 15px 0;
 }
 .footerElem>div>a>p{
@@ -78,6 +78,7 @@ ul{
     color: grey;
     text-decoration: none;
 }
+
 
 #copyright{
     font-size: small;
