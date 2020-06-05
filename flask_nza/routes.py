@@ -11,6 +11,7 @@ def home():
     return render_template("index.html")
 
 @app.route('/cases')
+@login_required
 def cases()
     cases = Case.query.all()
     return render_template("cases.html",cases=cases)
