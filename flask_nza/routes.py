@@ -9,8 +9,8 @@ from flask_login import login_required,login_user,current_user,logout_user
 
 @app.route('/cases/delete/<int:post_id>', methods=['POST'])
 @login_required
-def case_delete(post_id):
-    case = Post.query.get_or_404(case_id)
-    db.session.delete(post)
+def case_delete(case_id):
+    case = Case.query.get_or_404(case_id)
+    db.session.delete(case)
     db.session.commit()
-    return redirect(url_for('home'))
+    return redirect(url_for('cases'))
