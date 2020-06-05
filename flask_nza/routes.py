@@ -8,6 +8,14 @@ from flask import render_template, request, redirect, url_for
 from flask_login import login_required,login_user,current_user,logout_user
 
 
+@app.route('/cases/delete/<int:case_id>', methods=['POST'])
+@login_required
+def case_delete(case_id):
+    case = Case.query.get_or_404(case_id)
+    db.session.delete(case)
+    db.session.commit()
+    return redirect(url_for('cases'))
+
 
 
 
@@ -35,3 +43,4 @@ def case():
         db.session.commit()
         return redirect(url_for('cases'))#clears out the form fields
     return render_template('cases.html', post=post)
+  
