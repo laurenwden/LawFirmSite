@@ -6,6 +6,15 @@ from flask import render_template, request, redirect, url_for
 #from flask_nza.models import User, Post, check_password_hash
 
 from flask_login import login_required,login_user,current_user,logout_user
+@app.route('/')
+def home():
+    return render_template("index.html")
+
+@app.route('/cases')
+@login_required
+def cases()
+    cases = Case.query.all()
+    return render_template("cases.html",cases=cases)
 
 
 @app.route('/cases/delete/<int:case_id>', methods=['POST'])
