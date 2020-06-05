@@ -14,3 +14,41 @@ def home():
 def cases()
     cases = Case.query.all()
     return render_template("cases.html",cases=cases)
+
+
+@app.route('/cases/delete/<int:case_id>', methods=['POST'])
+@login_required
+def case_delete(case_id):
+    case = Case.query.get_or_404(case_id)
+    db.session.delete(case)
+    db.session.commit()
+    return redirect(url_for('cases'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@app.route('/cases', methods=['GET', 'POST'])
+@login_required
+def case():
+    case = CaseForm()
+    if request.method == 'POST' and post.validate():
+        title = case.title.data
+        note = case.note.data
+        user_id = current_user.id
+        print("\n", title, note)
+        case = Case(title, note, user_id)
+        db.session.add(case)
+        db.session.commit()
+        return redirect(url_for('cases'))#clears out the form fields
+    return render_template('cases.html', post=post)
+  
