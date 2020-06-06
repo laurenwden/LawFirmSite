@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<a href="{{ url_for('cases') }}"><button class="btn btn-primary">Back to Existing Cases</button></a>
+<a href="{{ url_for('existingcases') }}"><button class="btn btn-primary">Back to Existing Cases</button></a>
 
 <div class="container">
     <h1>This case belongs to : {{ case.user_id }}</h1>

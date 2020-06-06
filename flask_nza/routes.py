@@ -10,11 +10,7 @@ from flask_login import login_required,login_user,current_user,logout_user
 def home():
     return render_template("home.html")
 
-@app.route('/cases')
-@login_required
-def cases():
-    cases = Case.query.all()
-    return render_template("cases.html",cases=cases)
+
 
 #Register Route
 @app.route('/register', methods=['GET','POST'])
@@ -58,19 +54,25 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
-
-
+@app.route('/cases/delete/<int:case_id>', methods=['POST'])
+@login_required
 def case_delete(case_id):
     case = Case.query.get_or_404(case_id)
     db.session.delete(case)
     db.session.commit()
-    return redirect(url_for('cases'))
+    return redirect(url_for('existingcases'))
 
-@app.route('/cases', methods=['GET', 'POST'])
+@app.route('/existingcases')
 @login_required
-def case():
+def existingcases():
+    case = Case.query.all()
+    return render_template("existingcases.html",case=case)
+
+@app.route('/createcases', methods=['GET', 'POST'])
+@login_required
+def createcases():
     case = CaseForm()
-    if request.method == 'POST' and post.validate():
+    if request.method == 'POST' and case.validate():
         title = case.title.data
         note = case.note.data
         user_id = current_user.id
@@ -78,13 +80,13 @@ def case():
         case = Case(title, note, user_id)
         db.session.add(case)
         db.session.commit()
-        return redirect(url_for('cases'))#clears out the form fields
-    return render_template('cases.html', case=case)
+        return redirect(url_for('createcases'))#clears out the form fields
+    return render_template('createcases.html', case=case)
   
-@app.route('/cases')
+@app.route('/case_detail/<int:case_id>')
 @login_required
 def case_detail(case_id):
-    #case = Case.query.filter_by(user_id=current_user.id).first()
+    # case = Case.query.filter_by(user_id=current_user.id).first()
     case = Case.query.get_or_404(case_id)
     return render_template('case_detail.html', case = case)
 
@@ -99,7 +101,7 @@ def case_update(case_id):
         title = update_form.title.data
         note = update_form.note.data
         user_id = current_user.id
-        print(title,content,user_id)
+        print(title,note,user_id)
 
         # Update will get added to the DB
         case.title = title
