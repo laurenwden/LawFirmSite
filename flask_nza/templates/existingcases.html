@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if current_user.is_authenticated %}
+<p>Hello <b>{{ current_user.username }}</b>!</p>
+<p>Here are your contacts:</p>
+
+{% for i in case %}
+    <div class="container">
+        <h3>
+            <a href="{{ url_for('case_detail', case_id = i.id) }}">{{ i.title }}</a>
+        </h3>
+        <p>{{ i.content }}</p>
+    </div>
+{% endfor %}
+{% else %}
+<h2>Sorry, you gotta log-in first :)</h2>
+{% endif %}
+{% endblock content %}
