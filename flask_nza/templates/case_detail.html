@@ -1,5 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
+<a href="{{ url_for('existingcases') }}"><button class="btn btn-primary">Back to Existing Cases</button></a>
+
+<div class="container">
+    <h1>This case belongs to : {{ case.user_id }}</h1>
+
+    <hr>
+    <h3>Title: {{ case.title }}</h3>
+    <h3>notes:</h3>
+    <p> {{ case.note }}</p>
+
+    <blockquote>Date Created: {{ case.date_created }}</blockquote>
+
+    <!--Update Button-->
+    <a href="{{ url_for('case_update', case_id = case.id ) }}"><button class="btn btn-primary">Update</button></a>
 
  <!--Delete Button-->
  <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#dangerModal">Delete Case</button>
