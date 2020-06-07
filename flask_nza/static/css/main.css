@@ -61,7 +61,6 @@ ul{
 .foot{
     margin-top: 10px;
     text-align: center;
-    border-top: 2px solid black;
     /* position: fixed; */
     margin-left: 20px;
     bottom: 0;
@@ -182,3 +181,6 @@ address::first-line {
 }
 
 
+.footerElem {
+    margin: 0 auto;
+}

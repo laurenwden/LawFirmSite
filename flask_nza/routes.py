@@ -114,3 +114,9 @@ def case_update(case_id):
         return redirect(url_for('case_update', case_id = case.id))
     return render_template('case_update.html', update_form = update_form)
 
+@app.route('/whatwedo')
+def whatwedo():
+    return render_template("whatwedo.html")
+@app.route('/whoweare')
+def whoweare():
+    return render_template("whoweare.html")
