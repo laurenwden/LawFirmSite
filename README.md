@@ -1,43 +1,85 @@
-# Law firm site
-This is the first of many projects by **The Breaking Benjamins** ("TBB") -- a group of legendary coders from all around 'Merica.
+# NZA Lawfirm WebApp
+This is the first project by *The Bob Marley's* using FLASK.
 
-The final deliverable can be found [here.](https://jnolan97.github.io/LawFirmSite/)
+The original requirenments can be found [here](https://classroom.google.com/c/OTQ5OTQ1MDk1MDNa/a/MTA5MTk0MDk4MDMw/details).
 
-You may find the original requirenments [here.](https://classroom.google.com/c/OTQ5OTQ1MDk1MDNa/a/MTAwMTAxODgxMjQ1/details)
+## PreWork
+* Brainstormed on the approach
+* Agreed on 55%-55% approach (__because we gave it 110%__) join programming v. individual programming
+* Schedule breaks, meals, debugging time expectations
+* Created file structure together, including Procfile
+* Divided tasks fairly [here](https://docs.google.com/spreadsheets/d/1FA5QScZEDUsldNLGAP9XTDDBjh1gaPlfBu0SfVeUSec/edit#gid=1414651411)
+* Forked originator's repo, made local clones
+* Created Heroku collaborators project the night before, as well as a shared drive folder
 
-In summary, TBB was tasked with:
-* Replicating a website for a law firm
-* Working remotely using GitHub
+## Environment 
+* First did a pull from the original originator's github repo
+* Then: 
+```
+virtualenv flask_nza_env
+cd Scripts 
+activate
+../..
+pip install flask
+pip install Flask-WTF
+pip install Flask-SQLAlchemy
+pip install Flask-Migrate
+pip install Flask-Login
+pip freeze
+```
+* After, requirenments.txt from a pip freeze
+* After forks + clones, everyone had to:
+```
+pip install -r requirenments.txt
+```
 
-## Main page & Logo(s)/Header
-The main page displays:
-* a nav bar with all sections of the site, 
-* a main photo, 
-* a welcome message, 
-* a scroll-enabled news feed, and, 
-* an address section with contact info.
+## Features
+### Common Elements
+Jointly created models.py, routes.py, IlovePie.py, base.html, nav.html, footer.html.
 
-The "logo" in this site is actually a combination of an art icon and the firm's name. Technically, it's two logos in one. No functionality to them.
+### Register/LogIn/Logout
+*By Celeste B.*
 
-Completed by Aaron. Original code [here.](https://github.com/jnolan97/LawFirmSite/tree/mainpage)
+Backend: `@app.route('/register', methods=['GET','POST'])` and `@app.route('/login', methods = ['GET','POST'])`
+Frontend: register.html and login.html.
 
-## What We Do & Nav bar
-The What We Do pag displays:
-* images with borders,
-* a list to the side of the page,
-* navbar and,
-* a footer linking to other pages on the site.
+### Create Case
+*By Lauren W.*
 
-Nav bar contains links to more information about the company. "WHO WE ARE" and "WHAT WE DO" tabs link to other pages within the website.
+Backend: `@app.route('/createcases', methods=['GET', 'POST'])`
+Backend: Created forms.py
 
-Completed by Lauren. Original code [here.](https://github.com/jnolan97/LawFirmSite/tree/whoweare)
+### Existing Cases
+*By Jack N.*
 
-## Who We Are & Footer
-The Who We Are page displays 
-* a column with text and an image. 
-* It also shows a text area on the right followed by five placeholder images with borders. 
-* The nav bar and footer allow the user to navigate to other pages within the site.
+Backend: `@app.route('/existingcases')`
+Frontend: existingcases.html
 
-Styled a footer with links resembling that of the mockup page. The links take you from page to page.
+### Update Case Note / Case Detail
+*By Jackie H.*
 
-Completed by Jack. Original code [here.](https://github.com/jnolan97/LawFirmSite/tree/whatwedo)
+Backend: `@app.route('/case_detail/<int:case_id>')`, `@app.route('/cases/update/<int:case_id>', methods = ['GET', 'POST'])` and `@app.route('/logout')`
+Frontend: case_detail.html and case_update.html
+
+### Delete Case Note
+*By Aaron A.*
+
+Backend: `@app.route('/cases/delete/<int:case_id>', methods=['POST'])`
+Frontend: Delete Button, Delete Button Modal
+
+## Database
+Created database and linked it to our backend with:
+```
+flask db init
+flask db migrate -m "first migration"
+flaks db upgrade
+```
+
+## Deployment
+- First we installed the following programs:
+```
+pip install pillow pycopg2 gunicorn
+```
+- Then, connected github repo to Heroku and [deployed](https://www.youtube.com/watch?v=wx-F8Y0JXiU)
+
+Deployed version can be found [here](https://nza-lawfirm.herokuapp.com/)
